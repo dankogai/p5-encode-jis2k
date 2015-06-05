@@ -1,5 +1,5 @@
 #
-# $Id: sjis-2k.ucm,v 0.1 2005/05/12 06:59:41 dankogai Exp $
+# $Id: sjis-2k.ucm,v 0.03 2015/06/05 03:57:30 dankogai Exp dankogai $
 #
 <code_set_name> "shiftjisx0213"
 <mb_cur_min> 1

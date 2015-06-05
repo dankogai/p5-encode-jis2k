@@ -1,7 +1,7 @@
 package Encode::JIS2K::2022JP3;
 use strict;
 
-our $VERSION = do { my @r = (q$Revision: 0.2 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+our $VERSION = do { my @r = (q$Revision: 0.03 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 use Encode qw(:fallbacks);
 
