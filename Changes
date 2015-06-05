@@ -1,0 +1,12 @@
+#
+# $Id: Changes,v 0.2 2005/05/12 07:00:10 dankogai Exp $
+# Revision history for Perl extension Encode::JIS2K.
+#
+$Revision: 0.2 $ $Date: 2005/05/12 07:00:10 $
+! lib/Encode/JIS2K/2022JP3.pm
+  find_encoding('iso-2022-jp-3')->name returns 'Canon', not 'iso-2022-jp-3'.
+  Debugged by Hirata Keisuke tahi@gb3.so-net.ne.jp
+  Message-Id: <20050512.154012.120210732.tahi@gb3.so-net.ne.jp>
+0.01 2002/04/30 09:06:57 
+  First Release
+
