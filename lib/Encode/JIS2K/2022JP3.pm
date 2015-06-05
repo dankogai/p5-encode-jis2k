@@ -1,4 +1,4 @@
-package Encode::JIS7::2022JP3;
+package Encode::JIS2K::2022JP3;
 use strict;
 
 our $VERSION = do { my @r = (q$Revision: 0.2 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
