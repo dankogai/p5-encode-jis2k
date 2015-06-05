@@ -74,7 +74,7 @@ sub post_initialize
     $self->{'C'} = ["$name.c"];
     # $self->{'H'} = [$self->catfile($self->updir,'encode.h')];
     my %xs;
-    foreach my $table (keys %tables) {
+    foreach my $table (sort keys %tables) {
 	push (@{$self->{'C'}},"$table.c");
 	# Do NOT add $table.h etc. to H_FILES unless we own up as to how they
 	# get built.
@@ -92,7 +92,7 @@ sub post_initialize
 #define U8 U8
 #include "encode.h"
 END
-    foreach my $table (keys %tables) {
+    foreach my $table (sort keys %tables) {
 	print XS qq[#include "${table}.h"\n];
     }
     print XS <<"END";
@@ -121,7 +121,7 @@ PROTOTYPES: DISABLE
 BOOT:
 {
 END
-    foreach my $table (keys %tables) {
+    foreach my $table (sort keys %tables) {
 	print XS qq[#include "${table}.exh"\n];
     }
     print XS "}\n";
@@ -135,14 +135,14 @@ sub postamble
     my $dir  = "."; # $self->catdir('Encode');
     my $str  = "# $name\$(OBJ_EXT) depends on .h and .exh files not .c files - but all written by enc2xs\n";
     $str    .= "$name.c : $name.xs ";
-    foreach my $table (keys %tables)
+    foreach my $table (sort keys %tables)
     {
 	$str .= " $table.c";
     }
     $str .= "\n\n";
     $str .= "$name\$(OBJ_EXT) : $name.c\n\n";
 
-    foreach my $table (keys %tables)
+    foreach my $table (sort keys %tables)
     {
 	my $numlines = 1;
 	my $lengthsofar = length($str);

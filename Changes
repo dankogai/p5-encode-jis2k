@@ -3,6 +3,14 @@
 # Revision history for Perl extension Encode::JIS2K.
 #
 $Revision: 0.2 $ $Date: 2005/05/12 07:00:10 $
+! Makefile.PL
+  fix RT#104967
+  https://rt.cpan.org/Ticket/Display.html?id=104967
+! lib/Encode/JIS2K/2022JP3.pm
+  fix RT#73401
+  https://rt.cpan.org/Ticket/Display.html?id=73401
+
+0.02 2005/05/12 07:00:10
 ! lib/Encode/JIS2K/2022JP3.pm
   find_encoding('iso-2022-jp-3')->name returns 'Canon', not 'iso-2022-jp-3'.
   Debugged by Hirata Keisuke tahi@gb3.so-net.ne.jp
