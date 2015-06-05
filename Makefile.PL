@@ -17,14 +17,21 @@ my %tables = (
 	     );
 
 
-my ($enc2xs, $encode_h) = ();
-PATHLOOP:
-for my $d (split /:/, $ENV{PATH}){
-    for my $f (qw/enc2xs enc2xs5.7.3/){
-        my $path = File::Spec->catfile($d, $f);
-        -x $path and $enc2xs = $path and last PATHLOOP;
-    }
+# from perlvar
+use Config;  # first appeared in 5.00307
+my $secure_perl_path = $Config{perlpath};
+if ($^O ne 'VMS') {
+    my $secure_perl_path .= $Config{_exe}
+        unless $secure_perl_path =~ m/$Config{_exe}$/i;
 }
+die "can't determine path to the perl I'm running under"
+    unless ($secure_perl_path);
+use File::Basename qw(dirname);
+my $dpath = dirname $secure_perl_path;
+my ($enc2xs, $encode_h) = ();
+my $enc2xs_fpath = File::Spec->catfile($dpath, 'enc2xs');
+$enc2xs = $enc2xs_fpath
+    if (-x $enc2xs_fpath);
 $enc2xs or die "enc2xs not found!";
 print "enc2xs is $enc2xs\n";
 my %encode_h = ();
