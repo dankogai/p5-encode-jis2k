@@ -3,6 +3,10 @@
 # Revision history for Perl extension Encode::JIS2K.
 #
 $Revision: 0.04 $ $Date: 2023/11/15 03:55:42 $
+! JIS2K.pm README
+  update POD and pod2text JIS2K.pm > README
+
+0.04 2023/11/15 03:55:42
 ! JIS2K.pm
   resolved RT#150457: typo in documentation
   https://rt.cpan.org/Ticket/Display.html?id=150457
