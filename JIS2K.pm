@@ -1,5 +1,5 @@
 package Encode::JIS2K;
-our $VERSION = sprintf "%d.%02d", q$Revision: 0.03 $ =~ /(\d+)/g;
+our $VERSION = sprintf "%d.%02d", q$Revision: 0.04 $ =~ /(\d+)/g;
 
 use Encode;
 use XSLoader;

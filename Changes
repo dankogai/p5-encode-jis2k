@@ -1,8 +1,8 @@
 #
-# $Id: Changes,v 0.03 2015/06/05 03:57:30 dankogai Exp dankogai $
+# $Id: Changes,v 0.04 2023/11/15 03:55:42 dankogai Exp dankogai $
 # Revision history for Perl extension Encode::JIS2K.
 #
-$Revision: 0.03 $ $Date: 2015/06/05 03:57:30 $
+$Revision: 0.04 $ $Date: 2023/11/15 03:55:42 $
 ! JIS2K.pm
   resolved RT#150457: typo in documentation
   https://rt.cpan.org/Ticket/Display.html?id=150457
